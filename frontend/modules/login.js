@@ -22,7 +22,6 @@ export default class Login {
 
         })
 
-
     }
 
     validate(e) {
@@ -32,15 +31,21 @@ export default class Login {
 
         let error = false
 
-        if (!validator.isEmail(emailInput)) {
+
+
+        if (!validator.isEmail(emailInput.value)) {
             alert('E-mail inválido')
             error = true
+            return
         }
-        if (passwordInput.value.length < 0 || passwordInput.value.length > 50) {
+
+        if (passwordInput.value.length < 3 || passwordInput.value.length > 50) {
+            console.log('Senha inválida')
             alert('Senhaa precisa ter entre 3 e 50 caracteres')
             error = true
         }
 
-        if(!error) el.submit()
+
+        if (!error) el.submit()
     }
 }

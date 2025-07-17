@@ -80,7 +80,11 @@ Sistema completo de gerenciamento de contatos, desenvolvido com Node.js, Express
    ```
 3. Crie o arquivo `.env` na raiz do projeto:
    ```env
-   CONNECTIONSTRING=mongodb://<usuario>:<senha>@<host>:<porta>/<database>
+   CONNECTIONSTRING=mongodb://<usuario>:<senha>@<host>/<database>?retryWrites=true&w=majority&appName=Estudos
+
+   ex:CONNECTIONSTRING=mongodb+srv://<usuario>:<senha>@estudos.ias0xa7.mongodb.net/AGENDA?retryWrites=true&w=majority&appName=Estudos
+
+   Neste caso crie meu banco de dados com o nome Estudos e a minha "tabela" como Agenda
    ```
 
    > **Observação:** Está sendo utilizado o banco de dados MongoDB, recomendo que crie uma conta gratuita no site do MongoDB atlas e utilize o mesmo para conexão.

@@ -15,7 +15,13 @@
 
                     <div class="responsive-table">
                         <table class="table my-3">
-
+                            <tr>
+                                <th>Nome</th>
+                                <th>Sobrenome</th>
+                                <th>Telefone</th>
+                                <th>E-mail</th>
+                                <th colspan="2">Ações</th>
+                            </tr>
                             <% contatos.forEach(contato => { %>
                             <tr>
                                 <td><%= contato.nome %></td>
